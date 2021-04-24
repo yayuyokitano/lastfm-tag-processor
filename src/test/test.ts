@@ -31,8 +31,16 @@ describe("Basic filtering", () => {
 		assert.deepStrictEqual(filterTags(["seen live", "all", "ballad", "disgusting"]), ["ballad"]);
 	});
 
+	it("Should remove exact matches independent of casing", () => {
+		assert.deepStrictEqual(filterTags(["SEEN live", "alL", "balLad", "disgUSting"]), ["ballad"]);
+	})
+
 	it("Should remove explicit matches", () => {
 		assert.deepStrictEqual(filterTags(["a", "b", String.fromCharCode(...[115, 108, 117, 116]), "avslutning", `the word ${String.fromCharCode(...[115, 108, 117, 116])} is explicit`, `can't end with ${String.fromCharCode(...[115, 108, 117, 116])}`, `${String.fromCharCode(...[115, 108, 117, 116])} can't start tag`]), ["a", "b", "avslutning"]);
+	});
+
+	it("Should remove explicit matches independent of casing", () => {
+		assert.deepStrictEqual(filterTags(["a", "b", String.fromCharCode(...[115, 108, 117, 84]), "avslutning", `the word ${String.fromCharCode(...[115, 108, 117, 84])} is explicit`, `can't end with ${String.fromCharCode(...[115, 108, 117, 84])}`, `${String.fromCharCode(...[115, 108, 117, 84])} can't start tag`]), ["a", "b", "avslutning"]);
 	});
 
 });
@@ -40,7 +48,7 @@ describe("Basic filtering", () => {
 describe("Regex filters", () => {
 
 	it("Should remove tags starting with \"better than\"", () => {
-		assert.deepStrictEqual(filterTags(["a", "better than selena gomez"]), ["a"]);
+		assert.deepStrictEqual(filterTags(["a", "better than selena gomez", "BetTer ThAn selEnA GomEz"]), ["a"]);
 	});
 
 })
