@@ -1,21 +1,21 @@
 const exclusions = {
 	exact: [
 		"seen live",
-    "albums I own",
-    "albumsiown",
-    "check out",
-    "all",
-    "amazing",
-    "soty",
-    "aoty",
-    "songs seen live",
-    "fave",
-    "love at first listen",
-    "played",
-    "personal favourites",
-    "personal favorites",
-    "hino",
-    "disgusting"
+		"albums I own",
+		"albumsiown",
+		"check out",
+		"all",
+		"amazing",
+		"soty",
+		"aoty",
+		"songs seen live",
+		"fave",
+		"love at first listen",
+		"played",
+		"personal favourites",
+		"personal favorites",
+		"hino",
+		"disgusting"
 	],
 	regex: [
 		/better than.*/
