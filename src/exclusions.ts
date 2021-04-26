@@ -17,6 +17,7 @@ const exclusions = {
 		"personal favorites",
 		"hino",
 		"sexy",
+		"jam",
 		"disgusting"
 	],
 	regex: [
