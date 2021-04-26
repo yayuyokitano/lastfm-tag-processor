@@ -18,17 +18,31 @@ const exclusions = {
 		"hino",
 		"sexy",
 		"jam",
+		"why did i listen to this",
+		"flop",
+		"sex",
+		"shit",
+		"furry",
+		"boring",
+		"awful",
+		"worst song ever",
+		"life changing",
+		"bad",
+		"horrible",
+		"flopped",
 		"disgusting"
 	],
 	regex: [
-		/better than.*/
+		/better than.*/,
+		/why does this sound like.*/
 	],
 	explicit: [ // 96 + position in alphabet
 		[115, 108, 117, 116],
 		[110, 105, 103, 103, 101, 114],
 		[110, 105, 103, 103, 97],
 		[102, 97, 103, 103, 111, 116],
-		[119, 104, 111, 114, 101]
+		[119, 104, 111, 114, 101],
+		[103, 97, 121]
 	]
 }
 
