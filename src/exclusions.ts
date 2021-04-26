@@ -10,6 +10,7 @@ const exclusions = {
 		"aoty",
 		"songs seen live",
 		"fave",
+		"fav",
 		"love at first listen",
 		"played",
 		"personal favourites",
