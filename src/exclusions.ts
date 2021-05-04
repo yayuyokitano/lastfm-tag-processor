@@ -30,11 +30,19 @@ const exclusions = {
 		"bad",
 		"horrible",
 		"flopped",
-		"disgusting"
+		"disgusting",
+		"white power",
+		"1m",
+		"2w",
+		"1w",
+		"bots"
 	],
 	regex: [
 		/better than.*/,
-		/why does this sound like.*/
+		/why does this sound like.*/,
+		/best of \d{4}/,
+		/.*step on me.*/,
+		/hi \w+/
 	],
 	explicit: [ // 96 + position in alphabet
 		[115, 108, 117, 116],
